@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Aravinth V R – Web Developer</title>
+<meta name="description" content="Portfolio of Aravinth V R, B.Tech IT graduate and AWS Certified Cloud Practitioner building web applications with HTML, CSS, Django and Python.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#eaf0f5;--surface:#f8fafc;--ink:#0c1f33;--mute:#4d6075;--line:#c4d1de;--accent:#2f4cff;--accent-ink:#fff;--hi:#ffd23f;--ok:#12a150;--code-bg:#0c1f33;--code-ink:#dbe7f5;--code-key:#8fa4ff;--code-str:#8fe3b0;--code-num:#ffd23f;color-scheme:light;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0a1624;--surface:#10213a;--ink:#e6eef7;--mute:#9fb2c6;--line:#23384f;--accent:#8fa4ff;--accent-ink:#0a1624;--code-bg:#050d17;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0a1624;--surface:#10213a;--ink:#e6eef7;--mute:#9fb2c6;--line:#23384f;--accent:#8fa4ff;--accent-ink:#0a1624;--code-bg:#050d17;color-scheme:dark}
+html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 64px);scroll-behavior:smooth}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1.0625rem/1.6 "Bricolage Grotesque",system-ui,-apple-system,"Segoe UI",sans-serif;-webkit-font-smoothing:antialiased}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:30;background:var(--bg)}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:4px}
+.wrap{max-width:1080px;margin:0 auto;padding-inline:20px}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--bg);border-bottom:1px solid var(--line)}
+header .wrap{display:flex;align-items:center;gap:20px;height:60px}
+.brand{font-weight:800;letter-spacing:-.02em;text-decoration:none;margin-right:auto}
+nav{display:flex;gap:22px;font-size:.95rem}
+nav a{text-decoration:none;color:var(--mute)}
+nav a:hover{color:var(--ink);text-decoration:underline;text-underline-offset:5px}
+#t{font:inherit;font-size:.85rem;background:none;color:var(--ink);border:1px solid var(--line);border-radius:999px;padding:5px 13px;cursor:pointer}
+#t:hover{border-color:var(--accent)}
+@media (max-width:640px){nav{display:none}}
+
+.hero{padding:clamp(40px,8vw,96px) 0 clamp(48px,8vw,96px)}
+.hero .wrap{display:grid;gap:44px;align-items:center}
+@media (min-width:900px){.hero .wrap{grid-template-columns:1.1fr .9fr}}
+h1{margin:0;font-size:clamp(3.2rem,10.5vw,7.4rem);line-height:.92;font-weight:800;letter-spacing:-.045em}
+.lead{margin:26px 0 0;font-size:clamp(1.2rem,2.6vw,1.6rem);line-height:1.35;max-width:30ch;font-weight:500}
+#web{background:var(--surface)}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+.btn{display:inline-block;padding:12px 22px;border-radius:8px;font-weight:600;text-decoration:none;border:2px solid var(--ink)}
+.btn.p{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+.btn:hover{transform:translateY(-2px)}
+.btn{transition:transform .15s}
+
+.api{background:var(--code-bg);color:var(--code-ink);border-radius:14px;font:400 .9rem/1.7 "JetBrains Mono",ui-monospace,Menlo,Consolas,monospace;overflow:hidden;box-shadow:10px 10px 0 var(--accent)}
+.api .bar{display:flex;justify-content:space-between;gap:12px;padding:12px 18px;border-bottom:1px solid #ffffff22;font-size:.8rem}
+.api .ok{color:#7ee2a8;display:flex;align-items:center;gap:8px}
+.api .ok::before{content:"";width:9px;height:9px;border-radius:50%;background:#33d17a;box-shadow:0 0 0 0 #33d17a88;animation:pulse 2s infinite}
+.api pre{margin:0;padding:16px 18px 20px;overflow-x:auto;font:inherit}
+.k{color:var(--code-key)}.s{color:var(--code-str)}.n{color:var(--code-num)}
+.hl{background:var(--hi);color:#0c1f33;padding:1px 6px;border-radius:4px;font-weight:600}
+.ln{display:block;opacity:0;animation:show .01s forwards;animation-delay:calc(var(--i)*170ms + 300ms)}
+.caret{display:inline-block;width:.6em;height:1.05em;background:var(--code-ink);vertical-align:-.2em;animation:blink 1s steps(1) infinite}
+@keyframes show{to{opacity:1}}
+@keyframes blink{50%{opacity:0}}
+@keyframes pulse{70%{box-shadow:0 0 0 8px #33d17a00}100%{box-shadow:0 0 0 0 #33d17a00}}
+
+.sec{padding:clamp(56px,9vw,104px) 0;border-top:1px solid var(--line)}
+h2{margin:0 0 clamp(28px,5vw,52px);font-size:clamp(1.9rem,4.6vw,3.2rem);line-height:1.05;letter-spacing:-.03em;font-weight:800;max-width:20ch}
+h3{margin:0;font-size:1.5rem;line-height:1.15;letter-spacing:-.02em;font-weight:700}
+.chips{display:flex;flex-wrap:wrap;gap:7px;margin:14px 0 0;padding:0;list-style:none}
+.chips li{font-size:.82rem;padding:3px 10px;border:1px solid var(--line);border-radius:6px;background:var(--surface)}
+.date{margin:6px 0 0;color:var(--mute);font-size:.92rem}
+
+.pj{display:grid;gap:18px;padding:30px 0;border-top:1px solid var(--line)}
+.pj:first-of-type{border-top:0;padding-top:0}
+@media (min-width:860px){.pj{grid-template-columns:minmax(0,1fr) minmax(0,1.35fr);gap:48px}}
+.pj ul.pts{margin:0;padding-left:1.1em;max-width:60ch}
+.pj ul.pts li{margin-bottom:.55em}
+.pj ul.pts li::marker{color:var(--accent)}
+.feat{background:var(--surface);border:1px solid var(--line);border-left:6px solid var(--accent);border-radius:12px;padding:30px 26px!important;margin-bottom:10px}
+.feat h3{font-size:clamp(1.8rem,3.4vw,2.4rem)}
+.more{display:inline-block;margin-top:14px;font-weight:600}
+
+.pipe{list-style:none;margin:0;padding:0;display:grid;gap:30px}
+@media (min-width:860px){.pipe{grid-template-columns:repeat(4,1fr);gap:24px}}
+.pipe li{border-top:4px solid var(--accent);padding-top:14px}
+.pipe .no{font-size:2.4rem;font-weight:800;letter-spacing:-.04em;line-height:1;color:var(--accent)}
+.pipe h3{font-size:1.25rem;margin-top:8px}
+.pipe p{margin:4px 0 0;color:var(--mute);font-size:.95rem}
+
+.cred{display:grid;gap:4px 28px;margin:0;grid-template-columns:auto 1fr}
+.cred dt{font-weight:800;color:var(--accent);padding:18px 0;border-top:1px solid var(--line);font-variant-numeric:tabular-nums}
+.cred dd{margin:0;padding:18px 0;border-top:1px solid var(--line)}
+.cred dd b{display:block;font-size:1.15rem;letter-spacing:-.01em}
+.cred dd span{color:var(--mute);font-size:.95rem}
+
+.mail{display:inline-block;font-size:clamp(1.5rem,5.4vw,3.6rem);font-weight:800;letter-spacing:-.035em;line-height:1.1;text-decoration:none;overflow-wrap:anywhere;background:linear-gradient(var(--hi),var(--hi)) 0 92%/0 .32em no-repeat;transition:background-size .25s}
+.mail:hover{background-size:100% .32em}
+.links{display:flex;flex-wrap:wrap;gap:10px 28px;margin:28px 0 0;padding:0;list-style:none;font-weight:600}
+footer{padding:28px 0 36px;border-top:1px solid var(--line);color:var(--mute);font-size:.9rem}
+
+@media (prefers-reduced-motion:reduce){.ln{opacity:1;animation:none}.api .ok::before,.caret{animation:none}html{scroll-behavior:auto}.btn,.mail{transition:none}}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <a class="brand" href="#top">Aravinth V R</a>
+    <nav aria-label="Sections">
+      <a href="#web">Web development</a><a href="#projects">Projects</a><a href="#pipeline">Skills</a><a href="#credentials">Credentials</a><a href="#contact">Contact</a>
+    </nav>
+    <button id="t" type="button" aria-label="Switch light or dark theme">Theme</button>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="wrap">
+      <div>
+        <h1>Aravinth V R</h1>
+        <p class="lead">I build web apps from the browser to the database, then ship them to the cloud.</p>
+        <div class="cta">
+          <a class="btn p" href="#projects">See my web projects</a>
+          <a class="btn" href="#contact">Get in touch</a>
+        </div>
+      </div>
+      <div class="api" role="img" aria-label="API response summarising Aravinth: web developer using HTML, CSS, Django and Python, B.Tech IT 2025, CGPA 8.08, AWS Cloud Practitioner, open to work">
+        <div class="bar"><span>GET /api/aravinth</span><span class="ok">200 OK</span></div>
+<pre aria-hidden="true"><span class="ln" style="--i:0">{</span>
+<span class="ln" style="--i:1">  <span class="k">"name"</span>: <span class="s">"Aravinth V R"</span>,</span>
+<span class="ln" style="--i:2">  <span class="k">"role"</span>: <span class="s">"Web developer"</span>,</span>
+<span class="ln" style="--i:3">  <span class="k">"degree"</span>: <span class="s">"B.Tech IT, 2025"</span>,</span>
+<span class="ln" style="--i:4">  <span class="k">"cgpa"</span>: <span class="n">8.08</span>,</span>
+<span class="ln" style="--i:5">  <span class="k">"certified"</span>: <span class="s">"AWS Cloud Practitioner"</span>,</span>
+<span class="ln" style="--i:6">  <span class="k">"stack"</span>: [<span class="s">"HTML"</span>, <span class="s">"CSS"</span>, <span class="s">"Django"</span>, <span class="s">"Python"</span>],</span>
+<span class="ln" style="--i:7">  <span class="k">"location"</span>: <span class="s">"Tamil Nadu, India"</span>,</span>
+<span class="ln" style="--i:8">  <span class="k">"open_to_work"</span>: <span class="hl">true</span></span>
+<span class="ln" style="--i:9">}<span class="caret"></span></span></pre>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="web">
+    <div class="wrap">
+      <h2>Web development is my focus.</h2>
+      <dl class="cred">
+        <dt>Front end</dt><dd><b>Responsive HTML and CSS interfaces</b><span>Custom flexbox layouts that adapt to screen size, plus Streamlit interfaces for fast interaction.</span></dd>
+        <dt>Back end</dt><dd><b>Django and Flask applications</b><span>User authentication, booking management and REST endpoints that handle JSON requests and responses.</span></dd>
+        <dt>Data</dt><dd><b>MongoDB and SQL</b><span>Database operations with backend filtering and query optimization for faster retrieval.</span></dd>
+        <dt>APIs</dt><dd><b>Integration and voice input</b><span>API integration and real-time speech recognition inside a web interface.</span></dd>
+      </dl>
+    </div>
+  </section>
+
+  <section class="sec" id="projects">
+    <div class="wrap">
+      <h2>Projects I’ve built and shipped</h2>
+
+      <article class="pj feat">
+        <div>
+          <h3>Car Rental Application</h3>
+          <p class="date">September 2023 – January 2024</p>
+          <ul class="chips"><li>Django</li><li>HTML</li><li>CSS</li><li>MongoDB</li></ul>
+        </div>
+        <ul class="pts">
+          <li>Developed a Django car rental system with user authentication and booking management.</li>
+          <li>Implemented backend filtering and optimized query retrieval for better performance.</li>
+          <li>Integrated database operations with a responsive HTML and CSS frontend.</li>
+        </ul>
+      </article>
+
+      <article class="pj">
+        <div>
+          <h3>DevOps Inference API Deployment</h3>
+          <ul class="chips"><li>Flask</li><li>Docker</li><li>REST</li><li>Terraform</li><li>GitHub</li></ul>
+        </div>
+        <ul class="pts">
+          <li>Built a Flask inference API and containerized it with Docker.</li>
+          <li>Implemented a REST endpoint that handles JSON requests and responses.</li>
+          <li>Configured container networking and the deployment workflow.</li>
+          <li>Wrote an Infrastructure-as-Code setup using Terraform basics.</li>
+          <li>Documented deployment and scaling considerations in the GitHub repository.</li>
+        </ul>
+      </article>
+
+      <article class="pj">
+        <div>
+          <h3>Voice-Based Train Ticket Booking</h3>
+          <p class="date">March – May 2025</p>
+          <ul class="chips"><li>Python</li><li>Streamlit</li><li>Speech Recognition</li></ul>
+        </div>
+        <ul class="pts">
+          <li>Built an AI-powered ticket booking system that takes voice commands.</li>
+          <li>Added speech recognition so users give input in real time.</li>
+          <li>Designed a simple Streamlit interface for faster interaction.</li>
+        </ul>
+      </article>
+
+      
+      <a class="more" href="https://github.com/Aravinth-VR" target="_blank" rel="noopener">See the code on GitHub</a>
+    </div>
+  </section>
+
+  <section class="sec" id="pipeline">
+    <div class="wrap">
+      <h2>Then I take it to production</h2>
+      <ol class="pipe">
+        <li><div class="no">1</div><h3>Write</h3><p>Python, SQL, OOPs, data structures, API integration, Django, Flask, Streamlit, HTML, CSS</p></li>
+        <li><div class="no">2</div><h3>Package</h3><p>Docker, Git, GitHub</p></li>
+        <li><div class="no">3</div><h3>Automate</h3><p>GitHub Actions, Terraform basics</p></li>
+        <li><div class="no">4</div><h3>Run and watch</h3><p>AWS EC2, S3, IAM and CloudWatch</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="sec" id="credentials">
+    <div class="wrap">
+      <h2>Education and certificates</h2>
+      <dl class="cred">
+        <dt>2025</dt><dd><b>AWS Certified Cloud Practitioner (CLF-C02)</b><span>Amazon Web Services</span></dd>
+        <dt>2024</dt><dd><b>Python Development</b><span>Infosys Springboard</span></dd>
+        <dt>2023</dt><dd><b>Cisco Networking Essentials</b><span>Cisco Networking Academy</span></dd>
+        <dt>2021–25</dt><dd><b>B.Tech in Information Technology, CGPA 8.08</b><span>Pavendar Bharathidasan College of Engineering and Technology, Trichy</span></dd>
+      </dl>
+    </div>
+  </section>
+
+  <section class="sec" id="contact">
+    <div class="wrap">
+      <h2>I’m looking for an entry-level role in software or cloud.</h2>
+      <a class="mail" href="mailto:aravaravinth2004@gmail.com">aravaravinth2004@gmail.com</a>
+      <ul class="links">
+        <li><a href="tel:+918838140439">+91 88381 40439</a></li>
+        <li><a href="https://www.linkedin.com/in/aravinth-v-r-5552b8325" target="_blank" rel="noopener">LinkedIn</a></li>
+        <li><a href="https://github.com/Aravinth-VR" target="_blank" rel="noopener">GitHub</a></li>
+        <li>Ponnamaravathi, Tamil Nadu</li>
+      </ul>
+    </div>
+  </section>
+</main>
+
+<footer><div class="wrap">© 2026 Aravinth V R</div></footer>
+
+<script>
+(function(){
+  var r=document.documentElement,b=document.getElementById('t');
+  b.addEventListener('click',function(){
+    var d=r.dataset.theme?r.dataset.theme==='dark':matchMedia('(prefers-color-scheme: dark)').matches;
+    r.dataset.theme=d?'light':'dark';
+  });
+})();
+</script>
+</body>
+</html>
